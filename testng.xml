@@ -3,8 +3,8 @@
 <suite name="All Test Suite" parallel="methods" thread-count="4">
     <test verbose="2" preserve-order="true" name="SmokeAndRegression">
         <classes>
-            <class name="TestNGBasics.Priority"/>
-            <class name="TestNGBasics.DependsOn"/>
+            <class name="testngBasics.Priority"/>
+            <class name="testngBasics.DependsOn"/>
         </classes>
 
     </test>
