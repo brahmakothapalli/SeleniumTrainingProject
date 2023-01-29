@@ -1,10 +1,10 @@
 package alertsExamples;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
 import static java.lang.Thread.sleep;
 
@@ -12,7 +12,9 @@ public class AlertsTestCases {
 
     public static void main(String[] args) throws InterruptedException {
 
-        WebDriver driver = new FirefoxDriver();
+        WebDriverManager.chromedriver().setup();
+
+        WebDriver driver = new ChromeDriver();
 
         driver.manage().window().maximize();
 
@@ -31,6 +33,8 @@ public class AlertsTestCases {
         sleep(3);
 
         alert.accept(); // click OK or accepting alert
+
+        driver.quit();
 
     }
 }

@@ -1,3 +1,4 @@
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
@@ -7,9 +8,7 @@ public class LaunchingEdgeBrowser {
 
     public static void main(String[] args) {
 
-        String edge_driver_path = "D:\\qababu\\SeleniumTrainingProject\\wed_drivers\\msedgedriver.exe";
-
-        System.setProperty("webdriver.edge.driver", edge_driver_path);
+        WebDriverManager.chromedriver().setup();
 
         WebDriver driver = new EdgeDriver();
 

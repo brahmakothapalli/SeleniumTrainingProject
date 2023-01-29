@@ -1,5 +1,6 @@
 package practiceForm;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -13,9 +14,7 @@ public class FormPage {
     @Test
     public void SetUp() {
 
-        String chrome_driver_path = "D:\\qababu\\SeleniumTrainingProject\\wed_drivers\\chromedriver.exe";
-
-        System.setProperty("webdriver.chrome.driver", chrome_driver_path);
+        WebDriverManager.chromedriver().setup();
 
         WebDriver driver = new ChromeDriver();
 

@@ -1,5 +1,6 @@
 package windows;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -12,9 +13,7 @@ public class NewTab {
 
     public static void main(String[] args) throws InterruptedException {
 
-        String chrome_driver_path = "D:\\qababu\\SeleniumTrainingProject\\wed_drivers\\chromedriver.exe";
-
-        System.setProperty("webdriver.chrome.driver", chrome_driver_path);
+        WebDriverManager.chromedriver().setup();
 
         WebDriver driver = new ChromeDriver();
 
